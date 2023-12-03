@@ -13,16 +13,16 @@ import time
 # ser.readline()
 
 class PanTiltUnitDriver:
-    # Pan position
-    pan: int
-    # Tilt position
-    tilt: int
-    # Pan speed (pos/sec)
-    pan_speed: int
-    # Tilt speed (pos/sec)
-    tilt_speed: int
 
     def __init__(self):
+        # Pan position
+        self.pan: int | None = None
+        # Tilt position
+        self.tilt: int | None = None
+        # Pan speed (pos/sec)
+        self.pan_speed: int | None = None
+        # Tilt speed (pos/sec)
+        self.tilt_speed: int | None = None
         # Serial
         self.s: serial.Serial = serial.Serial('/dev/ttyUSB0', 38400)
         # initial position
