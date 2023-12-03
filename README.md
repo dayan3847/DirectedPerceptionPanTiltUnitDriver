@@ -2,6 +2,10 @@
 
 <img alt="PAN TILT UNIT" src="./img/ptu_d46.png" width="400"/>
 
+## Manual
+
+[PTU-D46 Manual](./doc/PTU-manual-E46-1.00-SMALL.pdf)
+
 ## Setup
 
 Check if the device is connected:
