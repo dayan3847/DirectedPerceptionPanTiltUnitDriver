@@ -8,6 +8,8 @@
 
 ## Setup
 
+### Linux
+
 Check if the device is connected:
 
 ```sh
@@ -20,14 +22,30 @@ Example:
 Bus 001 Device 014: ID xxx:xxxx QinHeng Electronics CH340 serial converter
 ```
 
-Change the permissions of the device:
+Change the ownership of the device:
 
 ```sh
 sudo chown 1000:1000 /dev/ttyUSB0 
 ```
 
-Check if the permissions are changed:
+Check if the ownership is changed:
 
 ```sh
-ll /dev/ttyUSB0 
+ls -al /dev/ttyUSB0 
 ```
+
+### MacOS
+
+Check if the device is connected:
+
+```sh
+ls -al /dev/tty.*
+```
+
+Example:
+
+```
+crw-rw-rw-  1 root  wheel  0x9000004 Jul  2 15:19 /dev/tty.usbserial-10
+```
+
+Note: In macOS, the device ownership not need to be changed.

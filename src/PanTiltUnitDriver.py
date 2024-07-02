@@ -14,7 +14,7 @@ import time
 
 class PanTiltUnitDriver:
 
-    def __init__(self):
+    def __init__(self, device: str):
         # Pan position
         self.pan: int | None = None
         # Tilt position
@@ -24,7 +24,7 @@ class PanTiltUnitDriver:
         # Tilt speed (pos/sec)
         self.tilt_speed: int | None = None
         # Serial
-        self.s: serial.Serial = serial.Serial('/dev/ttyUSB0', 38400)
+        self.s: serial.Serial = serial.Serial(device, 38400)
         # initial position
         self.init_pos: tuple = (-1760, 0)
         # Verbosity
